@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+import { RouteDetails } from "@/constant/RouteDetails";
 
 interface styledHeaderProps {
   isCollapsed: boolean;
@@ -19,13 +21,20 @@ const StyledHeader = styled(motion.header)<styledHeaderProps>`
 `;
 
 const Header = ({ isCollapsed }: { isCollapsed: boolean }) => {
+  const router = useRouter();
+  const currentRoute = router.pathname;
+
+  // Find the section with a matching route
+  const matchedSection = RouteDetails.find((section) =>
+    section.items.some((item) => item.href === currentRoute)
+  );
+
+  // If a matching section is found, display its title. Otherwise, default to an empty string or any default value.
+  const headerTitle = matchedSection ? matchedSection.title : "";
+
   return (
-    <StyledHeader
-      // initial={{ y: "-100%" }}
-      // animate={{ y: 0 }}
-      // exit={{ y: "-100%" }}
-      isCollapsed={isCollapsed}>
-      Header Content
+    <StyledHeader isCollapsed={isCollapsed}>
+      <h3>{headerTitle}</h3>
     </StyledHeader>
   );
 };

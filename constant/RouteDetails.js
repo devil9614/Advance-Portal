@@ -6,7 +6,7 @@ export const RouteDetails = [
     items: [
       {
         label: "Dashboard",
-        href: "/spectrometer/dashboard",
+        href: "/dashboard",
         icon: <RiDashboardFill />,
       },
       {
@@ -21,17 +21,17 @@ export const RouteDetails = [
     items: [
       {
         label: "Dashboard",
-        href: "/chargemix/dashboard",
+        href: "/chargemix",
         icon: <RiDashboardFill />,
       },
       {
         label: "Melting furnace",
-        href: "/chargemix/melting-furnace",
+        href: "/chargemix/melting",
         icon: <RiDashboardFill />,
       },
       {
         label: "Holding furnace",
-        href: "/chargemix/holding-furnace",
+        href: "/chargemix/holding",
         icon: <RiDashboardFill />,
       },
     ],
@@ -41,12 +41,12 @@ export const RouteDetails = [
     items: [
       {
         label: "Raw Materials",
-        href: "/raw-materials",
+        href: "/inventory",
         icon: <RiDashboardFill />,
       },
       {
         label: "Quality Reports",
-        href: "/quality-reports",
+        href: "/test",
         icon: <RiDashboardFill />,
       },
     ],
@@ -60,17 +60,17 @@ export const RouteDetails = [
     items: [
       {
         label: "Pricing and Rfq",
-        href: "/procurement/pricing-rfq",
+        href: "/rfq",
         icon: <RiDashboardFill />,
       },
       {
         label: "Raise RFQ",
-        href: "/procurement/raise-rfq",
+        href: "/raise",
         icon: <RiDashboardFill />,
       },
       {
         label: "Orders",
-        href: "/procurement/orders",
+        href: "/orders",
         icon: <RiDashboardFill />,
       },
     ],
