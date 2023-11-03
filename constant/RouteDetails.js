@@ -75,4 +75,24 @@ export const RouteDetails = [
       },
     ],
   },
+  {
+    title: "PROCUREMENT",
+    items: [
+      {
+        label: "Pricing and Rfq",
+        href: "/rfq",
+        icon: <RiDashboardFill />,
+      },
+      {
+        label: "Raise RFQ",
+        href: "/raise",
+        icon: <RiDashboardFill />,
+      },
+      {
+        label: "Orders",
+        href: "/orders",
+        icon: <RiDashboardFill />,
+      },
+    ],
+  },
 ];
